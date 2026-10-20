@@ -1,21 +1,29 @@
-# Dependencies
-node_modules
+# 1. MCP 설정 파일
+.mcp.json
 
-# Build output
-dist
-dist-ssr
+# 2. Claude 로컬 설정
+.claude/
 
-# Environment / secrets
+# 3. Node.js 관련
+node_modules/
+package-lock.json
+
+# 4. 캐시 파일
+.cache/
+.vite/
+dist/
+
+# 5. 환경 변수
 .env
-.env.*
-*.local
+.env.local
+.env.*.local
 
-# Logs
-*.log
-
-# OS / editor
+# 6. OS/IDE 파일
 .DS_Store
 Thumbs.db
-.vscode/*
-!.vscode/extensions.json
-.idea
+.vscode/
+.idea/
+
+# 7. 로그 파일
+*.log
+npm-debug.log*
