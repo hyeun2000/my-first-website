@@ -156,7 +156,7 @@ tree src/ -I node_modules
 ## 7. GitHub 백업 및 배포 (gh CLI 전용)
 
 새 프로젝트 생성 직후, 사용자가 자연어로 백업/배포를 요청하면 다음 흐름을 따른다.
-**전제: setup 단계에서 gh CLI 설치 + OAuth 인증 + `.claude/skills/gh_cli/skill.md` 스킬 등록이 이미 완료되어 있다.**
+**전제: setup 단계에서 gh CLI 설치 + OAuth 인증 + 상위 폴더 `claude_vive code/.claude/skills/gh_cli/SKILL.md` 스킬 등록이 이미 완료되어 있다.**
 
 ### 7-1. GitHub 백업 ("백업해줘" 요청 시)
 

@@ -31,7 +31,7 @@
 
 ## 백업 및 배포 규칙
 
-- 모든 GitHub 작업은 **gh CLI** 로 수행한다 (`.claude/skills/gh_cli/skill.md` 참조)
+- 모든 GitHub 작업은 **gh CLI** 로 수행한다 (상위 폴더 `claude_vive code/.claude/skills/gh_cli/SKILL.md` 참조)
 - 인증 = `gh auth login` **OAuth 방식만** 사용 (Personal Access Token 직접 발급 금지)
 - 백업 = `gh repo create` + `git push`. 사용자가 "백업해줘" 하면 gh CLI 로 처리
 - 웹 배포 = **GitHub Pages + GitHub Actions 워크플로우** (`.github/workflows/deploy.yml` + `gh api repos/.../pages -X PUT -f build_type=workflow`)
