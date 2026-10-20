@@ -22,10 +22,10 @@ ls -la | grep _template_settings
 ```bash
 # 1. 백업 템플릿을 새 프로젝트명으로 복사 (OS별 명령어)
 # Windows (PowerShell):
-powershell -Command "Copy-Item -Path '_template_settings\template-setup' -Destination '{프로젝트명}' -Recurse"
+powershell -Command "Copy-Item -Path '_template_settings' -Destination '{프로젝트명}' -Recurse"
 
 # macOS/Linux:
-cp -r _template_settings/template-setup {프로젝트명}
+cp -r _template_settings {프로젝트명}
 
 # 2. 프로젝트 디렉토리로 이동
 cd {프로젝트명}
@@ -45,7 +45,7 @@ cd {프로젝트명}
 
 # 3. 불필요한 파일 정리
 rm -rf .git  # 기존 git 히스토리 제거 (필요시)
-rm -rf template-setup  # 중첩된 디렉토리 제거 (발생 시)
+rm -rf _template_settings  # 중첩된 디렉토리 제거 (발생 시)
 ```
 
 ### 4. 패키지 확인 및 업데이트 (선택사항)
@@ -138,7 +138,7 @@ tree src/ -I node_modules
    - macOS/Linux: cp -r 사용
 
 3. **중첩된 디렉토리 문제**:
-   - 복사 과정에서 template-setup 디렉토리가 중첩되는 경우
+   - 복사 대상 폴더가 이미 존재하면 _template_settings 디렉토리가 내부에 중첩됨
    - 해당 디렉토리를 삭제하여 정리
 
 4. **node_modules 손상 시 대처**:
